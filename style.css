@@ -1,0 +1,45 @@
+article {
+  display: flex;
+  flex-flow: row wrap; }
+
+.wrapper {
+  width: 1720px;
+  margin: 0 auto; }
+
+.product {
+  padding: 15px;
+  height: 425px;
+  background: #465360; }
+  .product section {
+    width: 800px;
+    height: 340px; }
+  .product figure {
+    background: #fff;
+    width: 630px;
+    height: 285px; }
+
+.about {
+  height: 460px; }
+
+.dignity {
+  height: 550px;
+  background: #f5f5f5; }
+
+.screenshots {
+  height: 640px; }
+
+.reviews {
+  height: 550px;
+  background: #f5f5f5; }
+
+.buy {
+  height: 870px; }
+
+.footer-bg {
+  background: #465360;
+  height: 720px; }
+
+.footer-sm {
+  height: 35px; }
+
+/*# sourceMappingURL=style.css.map */

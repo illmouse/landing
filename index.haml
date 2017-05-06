@@ -1,0 +1,53 @@
+!!! 5
+%html{:lang => "en"}
+	%head
+		%meta{:charset => "UTF-8"}
+		%title Landing
+		%link{:rel => "stylesheet", :href => "style.css"}/
+	%body
+		.wrapper
+			%article.product
+				%section
+					%h1
+					%ul
+				%figure
+			%article.about
+				%section
+					%h2
+					%p
+				%figure
+			%main
+				%article.dignity
+					%h2
+						%section
+							- (1..6).each do |i|
+								%div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
+				%article.screenshots
+					%h2
+					%section
+						- (1..4).each do |i|
+							%div
+								%figure
+								%h3
+								%p
+				%article.reviews
+					%h2
+					%section
+						- (1..4).each do |i|
+							%div
+								%figure
+								%p
+				%article.buy
+					%h2
+					%section
+						- (1..3).each do |i|
+							%div
+			%footer.footer-bg
+				%h2
+				%section
+					- (1..3).each do |i|
+						%div
+				%footer.footer-sm
+
+
+
