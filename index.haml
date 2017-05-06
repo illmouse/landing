@@ -3,51 +3,99 @@
 	%head
 		%meta{:charset => "UTF-8"}
 		%title Landing
-		%link{:rel => "stylesheet", :href => "style.css"}/
+		%link{:rel => "stylesheet", :href => "normalize.css"}
+		%link{:rel => "stylesheet", :href => "style.css"}
 	%body
 		.wrapper
-			%article.product
+			.block.block-product
 				%section
-					%h1
+					%h1 Product name
 					%ul
+						%li Out on this page information about your product
+						%li A detailed decription of your product
+						%li Tell us about the advantages and merits
+						%li Associate the page with the payment system
 				%figure
-			%article.about
+			.block.block-about
 				%section
-					%h2
-					%p
+					%h2 About your product
+					%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
+					%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
 				%figure
 			%main
-				%article.dignity
-					%h2
-						%section
-							- (1..6).each do |i|
-								%div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
-				%article.screenshots
-					%h2
+				.block.block-dignity
+					%h2 Dignity and pluses product
+					%section
+						- (1..6).each do |i|
+							.text
+								.siding
+									.cross
+								%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
+				.block.block-screenshots
+					%h2 Screeshots
 					%section
 						- (1..4).each do |i|
-							%div
+							.screenshot-block
 								%figure
-								%h3
-								%p
-				%article.reviews
-					%h2
+								.text
+									%h3 The description for the image
+									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
+				.block.block-reviews
+					%h2 Reviewes
 					%section
 						- (1..4).each do |i|
-							%div
+							.review-block
 								%figure
-								%p
-				%article.buy
-					%h2
+								.quote
+									%p.quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil alias praesentium recusandae incidunt vitae animi inventore, exercitationem ut!
+									%p.quote__sgn Lourens S.
+				.block.block-buy
+					%h2 Buy it now
 					%section
-						- (1..3).each do |i|
-							%div
-			%footer.footer-bg
-				%h2
+						.prop.prop-lux
+							.header Lux
+							.price $200
+							.desc
+								%ol
+									- (1..12).each do |i|
+										%li Some text about product.
+							%button BUY
+						.prop.prop-premium
+							.header Premium
+							.price $150
+							.desc
+								%ol
+									- (1...9).each do |i|
+										%li Some text about product.
+							%button BUY
+						.prop.prop-standart
+							.header Standart
+							.price $100
+							.desc
+								%ol
+									- (1..4).each do |i|
+										%li Some text about product.
+							%button BUY
+			.footer-bg
+				%h2 Contacts
 				%section
-					- (1..3).each do |i|
-						%div
-				%footer.footer-sm
+					%form{:action => "post"}
+						%input.name{:type => "text", :placeholder => "Your name:"}
+						%input.email{:type => "email", :placeholder => "Your email:"}
+						%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:"}
+						%button{:type => "submit"} SEND
+					.contact
+						.contact__item.contact__item--skype here_your_login_skype
+						.contact__item.contact__item--icq 279679659
+						.contact__item.contact__item--mail psdhtmlcss@mail.ru
+						.contact__item.contact__item--phone 80 00 4568 55 55
+						.contact__item.contact__item--social
+							.pic.pic--twitter
+							.pic.pic--facebook
+							.pic.pic--insta
+							.pic.pic--gplus
+							.pic.pic--youtube
+			.footer.footer-sm
 
 
 

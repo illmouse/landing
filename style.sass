@@ -1,45 +1,357 @@
 // Variables
 
-$bg-dark: #465360
-$bg-lgrey: #f5f5f5
-$bg-dgrey: #eaeaeb
+$clr-dark: #445161
+$clr-lgrey: #fcfcfc
+$clr-dgrey: #f2f2f2
+$clr-black: #333333
+$clr-quote: #e8e8e8
+
+=flex($direction, $wrap, $justify)
+	display: flex
+	align-items: center
+	flex-flow: $direction $wrap
+	justify-content: $justify
+
+//  CSS Shapes
+
 
 // main styles
 
-article
-	display: flex
-	flex-flow: row wrap
+*
+	box-sizing: border-box
 
+figure
+	margin: 0
+
+h1, h2, h3, p
+	font-family: 'Arial'
+	font-weight: 400
+
+.block
+	padding: 50px
 .wrapper
-	width: 1720px
+	width: 1280px
 	margin: 0 auto
-.product
-	padding: 15px
-	height: 425px
-	background: $bg-dark
+	box-shadow: 0 0 10px rgba(0,0,0,0.5)
+.block-product
+	+flex(row, nowrap, space-between)
+	background: $clr-dark
+	color: white
 	section
-		width: 800px
-		height: 340px
+		font-size: 20px
+		line-height: 36px
 	figure
 		background: #fff
-		width: 630px
-		height: 285px
+		width: 470px
+		height: 215px
+	h1
+		font-size: 60px
 
-.about
-	height: 460px
-.dignity
-	height: 550px
-	background: $bg-lgrey
-.screenshots
-	height: 640px
-.reviews
-	height: 550px
-	background: $bg-lgrey
-.buy
-	height: 870px
+
+.block-about
+	background: $clr-lgrey
+	+flex(row, nowrap, space-between)
+	section
+		width: 650px
+	h2
+		color: $clr-dark
+		font-size: 30px
+	p
+		color: $clr-black
+		font-size: 16px
+		line-height: 24px
+	figure
+		background: $clr-dark
+		width: 430px
+		height: 245px
+		
+.block-dignity
+	background: $clr-dgrey
+	+flex(row, wrap, space-around)
+	h2
+		color: $clr-dark
+		font-size: 30px
+		margin-top: 0
+	section
+		+flex(row, wrap, space-between)
+		height: 260px
+		align-content: space-between
+		.text
+			+flex(row, nowrap, space-between)
+			align-items: flex-start
+			width: 570px
+			color: $clr-black
+			font-size: 16px
+			line-height: 24px
+		.siding
+			min-width: 32px
+			min-height: 32px
+			margin-right: 9px
+			margin-top: 5px
+			background: $clr-dark
+			padding: 5px
+			.cross 
+				background: #fff
+				width: 4px
+				height: 20px
+				position: relative
+				margin: 0 auto
+				&:after 
+					background: #fff
+					content: ""
+					width: 20px
+					height: 4px
+					left: -8px
+					position: absolute
+					top: 8px
+		p
+			margin: 0
+.block-screenshots
+	background: $clr-lgrey
+	+flex(row, wrap, space-around)
+	h2
+		color: $clr-dark
+		font-size: 30px
+		margin-top: 0
+	section
+		+flex(row, wrap, space-between)
+		height: 330px
+		align-content: space-between
+		.screenshot-block
+			+flex(row, nowrap, space-between)
+			align-items: flex-start
+			width: 575px
+			color: $clr-black
+			figure
+				background: $clr-dark
+				min-width: 200px
+				min-height: 150px
+				margin-top: 5px
+				margin-right: 15px
+			h3
+				color: $clr-dark
+				font-size: 24px
+				line-height: 30px
+				margin: 0
+			p
+				font-size: 16px
+				line-height: 24px
+				margin: 0
+.block-reviews
+	background: $clr-dgrey
+	+flex(row, wrap, space-around)
+	h2
+		color: $clr-dark
+		font-size: 30px
+		line-height: 36px
+		margin-top: 0
+	section
+		height: 270px
+		+flex(row, wrap, space-between)
+		.review-block
+			+flex(row, nowrap, space-between)
+			align-items: flex-start
+			width: 575px
+			figure
+				background: $clr-dark
+				min-width: 75px
+				min-height: 75px
+				border-radius: 100%
+				margin-top: 5px
+				margin-right: 15px
+			.quote
+				border-radius: 5px
+				width: 480px
+				height: 120px
+				background: $clr-quote
+				padding: 15px
+				position: relative
+				&__text
+					color: $clr-black
+					font-size: 14px
+					font-style: italic
+					line-height: 18px
+					margin: 0 0 15px 0
+				&__sgn
+					color: #989898
+					font-size: 14px
+					line-height: 18px
+					margin: 0
+				&:after
+					content: ""
+					position: absolute
+					right: 100%
+					top: 26px
+					width: 0
+					height: 0
+					border-top: 13px solid transparent
+					border-right: 13px solid $clr-quote
+					border-bottom: 13px solid transparent
+
+.block-buy
+	background: $clr-lgrey
+	// +flex(row, wrap, space-around)
+	padding: 50px 145px
+	h2
+		margin: 0 auto
+		margin-bottom: 30px
+		width: 400px
+		text-align: center
+		font-size: 30px
+		line-height: 36px
+		color: $clr-dark
+	section
+		height: 500px
+		+flex(row-reverse, wrap, space-between)
+		align-items: flex-end
+		.prop-lux
+			height: 500px
+			background: $clr-dark
+		.prop-premium
+			height: 400px
+			background: $clr-dark
+		.prop-standart
+			height: 300px
+			background: $clr-dark
+		.prop
+			position: relative
+			width: 300px
+			border-radius: 5px
+			text-align: center
+			.header
+				color: #fff
+				font-size: 24px
+				line-height: 30px
+				padding: 10px
+			.price
+				background: #fff
+				color: $clr-dark
+				font-size: 40px
+				line-height: 30px
+				padding: 18px
+				border: 2px solid $clr-dark
+			.desc
+				color: #fff
+				font-size: 14px
+				line-height: 24px
+				text-align: left
+				padding: 15px
+				ol
+					margin: 0
+			button
+				position: absolute
+				bottom: 20px
+				left: 20px
+				width: 260px
+				height: 40px
+				outline: none
+				border: none
+				border-radius: 5px
+				background: #fff
+				color: $clr-dark
+				font-size: 18px
+				font-weight: 700
+				line-height: 18px
+				&:active
+					bottom: 18px
 .footer-bg
-	background: $bg-dark
-	height: 720px
+	background: $clr-dark
+	padding: 50px 250px
+	h2
+		margin: 0 auto
+		margin-bottom: 30px
+		width: 300px
+		text-align: center
+		color: #fff
+		font-size: 30px
+		line-height: 36px
+	section
+		+flex(row, nowrap, space-around)
+		align-items: flex-start
+		form
+			+flex(row, wrap, center)
+			width: 500px
+			height: 340px
+			input
+				width: 100%
+				height: 40px
+				outline: none
+				border-radius: 5px
+				border: none
+				font-size: 16px
+				line-height: 24px
+				color: $clr-dark
+				padding-left: 10px
+			textarea
+				width: 100%
+				height: 170px
+				padding-left: 10px
+				resize: none
+				outline: none
+				border-radius: 5px
+				border: none
+				font-size: 16px
+				line-height: 24px
+				color: $clr-dark
+				font-family: 'Arial'
+			button
+				width: 140px
+				height: 40px
+				background: #fff
+				outline: none
+				border: none
+				border-radius: 5px
+				font-size: 16px
+				font-weight: 700
+				line-height: 24px
+				&:active
+					width: 135px
+		.contact
+			+flex(row, wrap, center)
+			width: 240px
+			height: 230px
+			+flex(row, wrap, space-around)
+			.contact__item
+				position: relative
+				width: 100%
+				font-size: 16px
+				line-height: 24px
+				color: #fff
+				padding-left: 35px
+				vertical-align: top
+				&--skype:before
+					position: absolute
+					left: 0
+					content: url(img/skype.png)
+				&--icq:before
+					position: absolute
+					left: 0
+					content: url(img/icq.png)
+				&--mail:before
+					position: absolute
+					left: 0
+					content: url(img/mail.png)
+				&--phone:before
+					position: absolute
+					left: 0
+					content: url(img/phone.png)
+				&--social
+					padding-left: 0
+					+flex(row, nowrap, space-around)
+					.pic
+						width: 48px
+						height: 42px
+						background: url(img/social.png) 0 0
+					.pic--facebook
+						background-position: -47px 0
+					.pic--insta
+						background-position: -96px 0
+					.pic--gplus
+						background-position: -146px 0
+					.pic--youtube
+						background-position: -193px 0
+
+
 .footer-sm
 	height: 35px
 
