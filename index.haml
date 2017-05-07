@@ -7,8 +7,9 @@
 		%link{:rel => "stylesheet", :href => "style.css"}
 
 		-# variables and stuff
-		- @contact_items = {'skype' => 'here_your_login_skype', 'icq' => '279679659', 'mail' => 'psdhtmlcss@mail.ru', 'phone' => '80 00 4568 55 55', 'social' => ''};
+		- @contact_items = {'skype' => 'here_your_login_skype', 'icq' => '279679659', 'mail' => 'psdhtmlcss@mail.ru', 'phone' => '80 00 4568 55 55', 'social' => ''}
 		- @social_pic = ['twitter', 'facebook', 'insta', 'gplus', 'youtube']
+		- @prop = {'Lux' => ['12','$200'],'Premium' => ['8','$150'],'Standart' => ['4','$100']}
 
 	%body
 		.wrapper
@@ -31,7 +32,7 @@
 				.block.block-dignity
 					%h2 Dignity and pluses product
 					%section
-						- (1..6).each do |i|
+						- 6.times do
 							.text
 								.siding
 									.cross
@@ -39,7 +40,7 @@
 				.block.block-screenshots
 					%h2 Screeshots
 					%section
-						- (1..4).each do |i|
+						- 4.times do
 							.screenshot-block
 								%figure
 								.text
@@ -48,7 +49,7 @@
 				.block.block-reviews
 					%h2 Reviewes
 					%section
-						- (1..4).each do |i|
+						- 4.times do
 							.review-block
 								%figure
 								.quote
@@ -62,7 +63,7 @@
 							.price $200
 							.desc
 								%ol
-									- (1..12).each do |i|
+									- 12.times do
 										%li Some text about product.
 							%button BUY
 						.prop.prop-premium
@@ -70,7 +71,7 @@
 							.price $150
 							.desc
 								%ol
-									- (1...8).each do |i|
+									- 8.times do
 										%li Some text about product.
 							%button BUY
 						.prop.prop-standart
@@ -78,7 +79,7 @@
 							.price $100
 							.desc
 								%ol
-									- (1..4).each do |i|
+									- 4.times do
 										%li Some text about product.
 							%button BUY
 			.footer-bg
