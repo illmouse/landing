@@ -5,6 +5,11 @@
 		%title Landing
 		%link{:rel => "stylesheet", :href => "normalize.css"}
 		%link{:rel => "stylesheet", :href => "style.css"}
+
+		-# variables and stuff
+		- @contact_items = {'skype' => 'here_your_login_skype', 'icq' => '279679659', 'mail' => 'psdhtmlcss@mail.ru', 'phone' => '80 00 4568 55 55', 'social' => ''};
+		- @social_pic = ['twitter', 'facebook', 'insta', 'gplus', 'youtube']
+
 	%body
 		.wrapper
 			.block.block-product
@@ -65,7 +70,7 @@
 							.price $150
 							.desc
 								%ol
-									- (1...9).each do |i|
+									- (1...8).each do |i|
 										%li Some text about product.
 							%button BUY
 						.prop.prop-standart
@@ -85,16 +90,13 @@
 						%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:"}
 						%button{:type => "submit"} SEND
 					.contact
-						.contact__item.contact__item--skype here_your_login_skype
-						.contact__item.contact__item--icq 279679659
-						.contact__item.contact__item--mail psdhtmlcss@mail.ru
-						.contact__item.contact__item--phone 80 00 4568 55 55
-						.contact__item.contact__item--social
-							.pic.pic--twitter
-							.pic.pic--facebook
-							.pic.pic--insta
-							.pic.pic--gplus
-							.pic.pic--youtube
+						-@contact_items.each do |key, value|
+							- if key == 'social'
+								%div{class: "contact__item contact__item--#{key}"}
+									-@social_pic.each do |value|
+										%div{class: "pic pic--#{value}"}
+							- else
+								%div{class: "contact__item contact__item--#{key}"} #{value}
 			.footer.footer-sm Copyright © 2014 Product name · PSD HTML CSS
 
 
