@@ -22,42 +22,43 @@
 						%li Tell us about the advantages and merits
 						%li Associate the page with the payment system
 				%figure
-			%main
+			%main{:role => "main"}
 				.block.block-about
 					%section
 						%h2 About your product
-						%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
-						%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
+						%article
+							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
+							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
 					%figure
-				.block.block-dignity
+				%section.block.block-dignity
 					%h2 Dignity and pluses product
-					%section
+					%article
 						- 6.times do
 							.text
 								.siding
 									.cross
 								%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
-				.block.block-screenshots
+				%section.block.block-screenshots					
 					%h2 Screeshots
-					%section
+					.screenshots-wrapper
 						- 4.times do
-							.screenshot-block
+							%article.screenshot-block
 								%figure
 								.text
 									%h3 The description for the image
 									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
-				.block.block-reviews
+				%section.block.block-reviews
 					%h2 Reviewes
-					%section
+					.review-wrapper
 						- 4.times do
-							.review-block
+							%article.review-block
 								%figure
 								%blockquote.quote
 									%p.quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil alias praesentium recusandae incidunt vitae animi inventore, exercitationem ut!
 									%p.quote__sgn Lourens S.
-				.block.block-buy
+				%section.block.block-buy
 					%h2 Buy it now
-					%section
+					%article
 						.prop.prop-lux
 							.header Lux
 							.price $200
@@ -82,7 +83,7 @@
 									- 4.times do
 										%li Some text about product.
 							%button BUY
-			.footer-bg
+			%footer.footer-bg
 				%h2 Contacts
 				%section
 					%form{:action => "post"}
@@ -98,7 +99,7 @@
 										%div{class: "pic pic--#{value}"}
 							- else
 								%div{class: "contact__item contact__item--#{key}"} #{value}
-			.footer.footer-sm Copyright © 2014 Product name · PSD HTML CSS
+			%footer.footer.footer-sm Copyright © 2014 Product name · PSD HTML CSS
 
 
 

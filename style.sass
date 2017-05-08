@@ -57,10 +57,6 @@ h1, h2, h3, p
 			height: 15px
 			border-right: 6px solid #fff
 			transform: rotate(45deg)
-			-o-transform: rotate(45deg)
-			-ms-transform: rotate(45deg)
-			-webkit-transform: rotate(45deg)
-
 
 .block-about
 	background: $clr-lgrey
@@ -86,7 +82,7 @@ h1, h2, h3, p
 		color: $clr-dark
 		font-size: 30px
 		margin-top: 0
-	section
+	article
 		+flex(row, wrap, space-between)
 		height: 260px
 		align-content: space-between
@@ -127,7 +123,7 @@ h1, h2, h3, p
 		color: $clr-dark
 		font-size: 30px
 		margin-top: 0
-	section
+	.screenshots-wrapper
 		+flex(row, wrap, space-between)
 		height: 330px
 		align-content: space-between
@@ -159,7 +155,7 @@ h1, h2, h3, p
 		font-size: 30px
 		line-height: 36px
 		margin-top: 0
-	section
+	.review-wrapper
 		height: 270px
 		+flex(row, wrap, space-between)
 		.review-block
@@ -213,7 +209,7 @@ h1, h2, h3, p
 		font-size: 30px
 		line-height: 36px
 		color: $clr-dark
-	section
+	article
 		height: 500px
 		+flex(row-reverse, wrap, space-between)
 		align-items: flex-end
