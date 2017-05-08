@@ -13,7 +13,7 @@
 
 	%body
 		.wrapper
-			.block.block-product
+			%header.block.block-product
 				%section
 					%h1 Product name
 					%ul
@@ -22,13 +22,13 @@
 						%li Tell us about the advantages and merits
 						%li Associate the page with the payment system
 				%figure
-			.block.block-about
-				%section
-					%h2 About your product
-					%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
-					%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
-				%figure
 			%main
+				.block.block-about
+					%section
+						%h2 About your product
+						%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
+						%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
+					%figure
 				.block.block-dignity
 					%h2 Dignity and pluses product
 					%section
@@ -52,7 +52,7 @@
 						- 4.times do
 							.review-block
 								%figure
-								.quote
+								%blockquote.quote
 									%p.quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil alias praesentium recusandae incidunt vitae animi inventore, exercitationem ut!
 									%p.quote__sgn Lourens S.
 				.block.block-buy

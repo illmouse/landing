@@ -17,7 +17,7 @@ $clr-quote: #e8e8e8
 *
 	box-sizing: border-box
 
-figure
+figure, blockquote, article
 	margin: 0
 
 h1, h2, h3, p
@@ -43,6 +43,23 @@ h1, h2, h3, p
 		height: 215px
 	h1
 		font-size: 60px
+	li
+		position: relative
+		list-style: none
+		&:after
+			content: ""
+			background-color: transparent
+			position: absolute
+			left: -28px
+			top: 5px
+			width: 8px
+			border-bottom: 6px solid #fff
+			height: 15px
+			border-right: 6px solid #fff
+			transform: rotate(45deg)
+			-o-transform: rotate(45deg)
+			-ms-transform: rotate(45deg)
+			-webkit-transform: rotate(45deg)
 
 
 .block-about
