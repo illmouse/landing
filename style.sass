@@ -20,13 +20,13 @@ $clr-quote: #e8e8e8
 figure, blockquote, article
 	margin: 0
 
-h1, h2, h3, p
+h1, h2, h3, p, summary
 	font-family: 'Arial'
 	font-weight: 400
 
 .block
 	padding: 50px
-.wrapper
+.wrapper-main
 	width: 1280px
 	margin: 0 auto
 	box-shadow: 0 0 10px rgba(0,0,0,0.5)
@@ -78,21 +78,24 @@ h1, h2, h3, p
 .block-dignity
 	background: $clr-dgrey
 	+flex(row, wrap, space-around)
+	padding-bottom: 30px
 	h2
 		color: $clr-dark
 		font-size: 30px
 		margin-top: 0
-	article
+	.wrapper-dignity
 		+flex(row, wrap, space-between)
-		height: 260px
 		align-content: space-between
+		align-items: flex-start
 		.text
+			position: relative
 			+flex(row, nowrap, space-between)
 			align-items: flex-start
 			width: 570px
 			color: $clr-black
 			font-size: 16px
 			line-height: 24px
+			padding-bottom: 20px
 		.siding
 			min-width: 32px
 			min-height: 32px
@@ -100,20 +103,26 @@ h1, h2, h3, p
 			margin-top: 5px
 			background: $clr-dark
 			padding: 5px
-			.cross 
-				background: #fff
-				width: 4px
-				height: 20px
-				position: relative
-				margin: 0 auto
-				&:after 
-					background: #fff
-					content: ""
-					width: 20px
-					height: 4px
-					left: -8px
+		details
+			summary
+				outline: none
+				&::-webkit-details-marker
+					display: none
+				&::before
 					position: absolute
-					top: 8px
+					top: 9px
+					left: 2px
+					content: '+'
+					color: #fff
+					font-size: 300%
+		details[open]
+			summary::before
+				position: absolute
+				top: 6px
+				left: 8px
+				content: '-'
+				color: #fff
+				font-size: 300%
 		p
 			margin: 0
 .block-screenshots
@@ -209,7 +218,7 @@ h1, h2, h3, p
 		font-size: 30px
 		line-height: 36px
 		color: $clr-dark
-	article
+	.wrapper-buy
 		height: 500px
 		+flex(row-reverse, wrap, space-between)
 		align-items: flex-end
@@ -265,106 +274,107 @@ h1, h2, h3, p
 					bottom: 18px
 .footer-bg
 	background: $clr-dark
-	padding: 50px 250px
-	h2
-		margin: 0 auto
-		margin-bottom: 30px
-		width: 300px
+	.wrapper-footer
+		padding: 50px 250px
+		h2
+			margin: 0 auto
+			margin-bottom: 30px
+			width: 300px
+			text-align: center
+			color: #fff
+			font-size: 30px
+			line-height: 36px
+		.wrapper-form
+			+flex(row, nowrap, space-around)
+			align-items: flex-start
+			form
+				+flex(row, wrap, center)
+				width: 500px
+				height: 340px
+				input
+					width: 100%
+					height: 40px
+					outline: none
+					border-radius: 5px
+					border: none
+					font-size: 16px
+					line-height: 24px
+					color: $clr-dark
+					padding-left: 10px
+				textarea
+					width: 100%
+					height: 170px
+					padding-left: 10px
+					resize: none
+					outline: none
+					border-radius: 5px
+					border: none
+					font-size: 16px
+					line-height: 24px
+					color: $clr-dark
+					font-family: 'Arial'
+				button
+					width: 140px
+					height: 40px
+					background: #fff
+					outline: none
+					border: none
+					border-radius: 5px
+					font-size: 16px
+					font-weight: 700
+					line-height: 24px
+					&:active
+						width: 135px
+			.wrapper-contact
+				+flex(row, wrap, center)
+				width: 240px
+				height: 230px
+				+flex(row, wrap, space-around)
+				.contact__item
+					position: relative
+					width: 100%
+					font-size: 16px
+					line-height: 24px
+					color: #fff
+					padding-left: 35px
+					vertical-align: top
+					&--skype:before
+						position: absolute
+						left: 0
+						content: url(img/skype.png)
+					&--icq:before
+						position: absolute
+						left: 0
+						content: url(img/icq.png)
+					&--mail:before
+						position: absolute
+						left: 0
+						content: url(img/mail.png)
+					&--phone:before
+						position: absolute
+						left: 0
+						content: url(img/phone.png)
+					&--social
+						padding-left: 0
+						+flex(row, nowrap, space-around)
+						.pic
+							width: 48px
+							height: 42px
+							background: url(img/social.png) 0 0
+						.pic--facebook
+							background-position: -47px 0
+						.pic--insta
+							background-position: -96px 0
+						.pic--gplus
+							background-position: -146px 0
+						.pic--youtube
+							background-position: -193px 0
+	.footer-sm
+		background: $clr-dgrey
+		height: 25px
+		font-size: 12px
+		letter-spacing: 0.3px
+		line-height: 25px
+		color: $clr-dark
 		text-align: center
-		color: #fff
-		font-size: 30px
-		line-height: 36px
-	section
-		+flex(row, nowrap, space-around)
-		align-items: flex-start
-		form
-			+flex(row, wrap, center)
-			width: 500px
-			height: 340px
-			input
-				width: 100%
-				height: 40px
-				outline: none
-				border-radius: 5px
-				border: none
-				font-size: 16px
-				line-height: 24px
-				color: $clr-dark
-				padding-left: 10px
-			textarea
-				width: 100%
-				height: 170px
-				padding-left: 10px
-				resize: none
-				outline: none
-				border-radius: 5px
-				border: none
-				font-size: 16px
-				line-height: 24px
-				color: $clr-dark
-				font-family: 'Arial'
-			button
-				width: 140px
-				height: 40px
-				background: #fff
-				outline: none
-				border: none
-				border-radius: 5px
-				font-size: 16px
-				font-weight: 700
-				line-height: 24px
-				&:active
-					width: 135px
-		.contact
-			+flex(row, wrap, center)
-			width: 240px
-			height: 230px
-			+flex(row, wrap, space-around)
-			.contact__item
-				position: relative
-				width: 100%
-				font-size: 16px
-				line-height: 24px
-				color: #fff
-				padding-left: 35px
-				vertical-align: top
-				&--skype:before
-					position: absolute
-					left: 0
-					content: url(img/skype.png)
-				&--icq:before
-					position: absolute
-					left: 0
-					content: url(img/icq.png)
-				&--mail:before
-					position: absolute
-					left: 0
-					content: url(img/mail.png)
-				&--phone:before
-					position: absolute
-					left: 0
-					content: url(img/phone.png)
-				&--social
-					padding-left: 0
-					+flex(row, nowrap, space-around)
-					.pic
-						width: 48px
-						height: 42px
-						background: url(img/social.png) 0 0
-					.pic--facebook
-						background-position: -47px 0
-					.pic--insta
-						background-position: -96px 0
-					.pic--gplus
-						background-position: -146px 0
-					.pic--youtube
-						background-position: -193px 0
-.footer-sm
-	background: $clr-dgrey
-	height: 35px
-	font-size: 12px
-	letter-spacing: 0.3px
-	line-height: 35px
-	color: $clr-dark
-	text-align: center
-	vertical-align: middle
+		vertical-align: middle

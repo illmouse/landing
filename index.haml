@@ -2,6 +2,7 @@
 %html{:lang => "en"}
 	%head
 		%meta{:charset => "UTF-8"}
+		%meta{:name => "viewport", :content => "width=device-width", :initial-scale => "1"}
 		%title Landing
 		%link{:rel => "stylesheet", :href => "normalize.css"}
 		%link{:rel => "stylesheet", :href => "style.css"}
@@ -12,7 +13,7 @@
 		- @prop = {'Lux' => ['12','$200'],'Premium' => ['8','$150'],'Standart' => ['4','$100']}
 
 	%body
-		.wrapper
+		.wrapper-main
 			%header.block.block-product
 				%section
 					%h1 Product name
@@ -26,23 +27,24 @@
 				.block.block-about
 					%section
 						%h2 About your product
-						%article
+						.text-about
 							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
 							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
 					%figure
 				%section.block.block-dignity
 					%h2 Dignity and pluses product
-					%article
+					.wrapper-dignity
 						- 6.times do
 							.text
 								.siding
-									.cross
-								%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
+								%details
+									%summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi doloremque laudantium praesentium, exercitationem ea! Laborum at magni deleniti id distinctio similique, perferendis reiciendis in quidem ab iure, incidunt saepe.
+									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
 				%section.block.block-screenshots					
 					%h2 Screeshots
 					.screenshots-wrapper
 						- 4.times do
-							%article.screenshot-block
+							.screenshot-block
 								%figure
 								.text
 									%h3 The description for the image
@@ -51,14 +53,14 @@
 					%h2 Reviewes
 					.review-wrapper
 						- 4.times do
-							%article.review-block
+							.review-block
 								%figure
 								%blockquote.quote
 									%p.quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil alias praesentium recusandae incidunt vitae animi inventore, exercitationem ut!
 									%p.quote__sgn Lourens S.
 				%section.block.block-buy
 					%h2 Buy it now
-					%article
+					.wrapper-buy
 						.prop.prop-lux
 							.header Lux
 							.price $200
@@ -84,22 +86,23 @@
 										%li Some text about product.
 							%button BUY
 			%footer.footer-bg
-				%h2 Contacts
-				%section
-					%form{:action => "post"}
-						%input.name{:type => "text", :placeholder => "Your name:"}
-						%input.email{:type => "email", :placeholder => "Your email:"}
-						%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:"}
-						%button{:type => "submit"} SEND
-					.contact
-						-@contact_items.each do |key, value|
-							- if key == 'social'
-								%div{class: "contact__item contact__item--#{key}"}
-									-@social_pic.each do |value|
-										%div{class: "pic pic--#{value}"}
-							- else
-								%div{class: "contact__item contact__item--#{key}"} #{value}
-			%footer.footer.footer-sm Copyright © 2014 Product name · PSD HTML CSS
+				.wrapper-footer
+					%h2 Contacts
+					.wrapper-form
+						%form{:action => "post"}
+							%input.name{:type => "text", :placeholder => "Your name:", :required => true}
+							%input.email{:type => "email", :placeholder => "Your email:", :required => true}
+							%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:", :required => true}
+							%button{:type => "submit"} SEND
+						.wrapper-contact
+							-@contact_items.each do |key, value|
+								- if key == 'social'
+									%div{class: "contact__item contact__item--#{key}"}
+										-@social_pic.each do |value|
+											%div{class: "pic pic--#{value}"}
+								- else
+									%div{class: "contact__item contact__item--#{key}"} #{value}
+				%footer.footer.footer-sm Copyright © 2014 Product name · PSD HTML CSS
 
 
 
