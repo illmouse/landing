@@ -314,7 +314,8 @@ footer {
       justify-content: space-around;
       align-items: flex-start; }
       footer .footer-bg .wrapper-footer form {
-        width: 500px; }
+        width: 500px;
+        height: 340px; }
         footer .footer-bg .wrapper-footer form input {
           width: 100%;
           height: 40px;
@@ -340,8 +341,10 @@ footer {
           color: #445161;
           font-family: "Arial"; }
         footer .footer-bg .wrapper-footer form button {
+          display: block;
           width: 140px;
           height: 40px;
+          margin: 0 auto;
           background: #fff;
           outline: none;
           border: none;
