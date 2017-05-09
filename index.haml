@@ -85,8 +85,8 @@
 									- 4.times do
 										%li Some text about product.
 							%button BUY
-			%footer.footer-bg
-				.wrapper-footer
+			%footer
+				.footer-bg
 					%h2 Contacts
 					.wrapper-form
 						%form{:action => "post"}
@@ -102,7 +102,7 @@
 											%div{class: "pic pic--#{value}"}
 								- else
 									%div{class: "contact__item contact__item--#{key}"} #{value}
-				%footer.footer.footer-sm Copyright © 2014 Product name · PSD HTML CSS
+				.footer-sm Copyright © 2014 Product name · PSD HTML CSS
 
 
 
