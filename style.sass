@@ -275,7 +275,7 @@ h1, h2, h3, p, summary
 footer
 	background: $clr-dark
 	.footer-bg
-		padding: 50px 250px
+		padding: 50px 220px
 		h2
 			margin: 0 auto
 			margin-bottom: 30px
@@ -284,16 +284,15 @@ footer
 			color: #fff
 			font-size: 30px
 			line-height: 36px
-		.wrapper-form
+		.wrapper-footer
 			+flex(row, nowrap, space-around)
 			align-items: flex-start
 			form
-				+flex(row, wrap, center)
 				width: 500px
-				height: 340px
 				input
 					width: 100%
 					height: 40px
+					margin-bottom: 15px
 					outline: none
 					border-radius: 5px
 					border: none
@@ -304,6 +303,7 @@ footer
 				textarea
 					width: 100%
 					height: 170px
+					margin-bottom: 15px
 					padding-left: 10px
 					resize: none
 					outline: none
@@ -324,19 +324,19 @@ footer
 					font-weight: 700
 					line-height: 24px
 					&:active
-						width: 135px
+						margin-top: 2px
 			.wrapper-contact
-				+flex(row, wrap, center)
+				+flex(row, wrap, space-between)
+				align-items: flex-start
 				width: 240px
 				height: 230px
-				+flex(row, wrap, space-around)
 				.contact__item
 					position: relative
 					width: 100%
-					font-size: 16px
+					font-size: 18px
 					line-height: 24px
 					color: #fff
-					padding-left: 35px
+					padding-left: 30px
 					vertical-align: top
 					&--skype:before
 						position: absolute
