@@ -80,18 +80,16 @@ h1, h2, h3, p, summary {
     margin-top: 0; }
   .block-dignity .wrapper-dignity {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-content: space-between;
-    align-items: flex-start; }
+    align-content: space-between; }
     .block-dignity .wrapper-dignity .text {
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-flow: row nowrap;
       justify-content: space-between;
-      align-items: flex-start;
       width: 570px;
       color: #333333;
       font-size: 16px;
@@ -140,14 +138,13 @@ h1, h2, h3, p, summary {
     align-items: center;
     flex-flow: row wrap;
     justify-content: space-between;
-    height: 330px;
-    align-content: space-between; }
+    align-content: space-between;
+    height: 330px; }
     .block-screenshots .screenshots-wrapper .screenshot-block {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-flow: row nowrap;
       justify-content: space-between;
-      align-items: flex-start;
       width: 575px;
       color: #333333; }
       .block-screenshots .screenshots-wrapper .screenshot-block figure {
@@ -185,10 +182,9 @@ h1, h2, h3, p, summary {
     justify-content: space-between; }
     .block-reviews .review-wrapper .review-block {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-flow: row nowrap;
       justify-content: space-between;
-      align-items: flex-start;
       width: 575px; }
       .block-reviews .review-wrapper .review-block figure {
         background: #445161;
@@ -240,10 +236,9 @@ h1, h2, h3, p, summary {
   .block-buy .wrapper-buy {
     height: 500px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     flex-flow: row-reverse wrap;
-    justify-content: space-between;
-    align-items: flex-end; }
+    justify-content: space-between; }
     .block-buy .wrapper-buy .prop-lux {
       height: 500px;
       background: #445161; }
@@ -309,10 +304,9 @@ footer {
       line-height: 36px; }
     footer .footer-bg .wrapper-footer {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-flow: row nowrap;
-      justify-content: space-around;
-      align-items: flex-start; }
+      justify-content: space-around; }
       footer .footer-bg .wrapper-footer form {
         width: 500px;
         height: 340px; }
@@ -356,10 +350,9 @@ footer {
             margin-top: 2px; }
       footer .footer-bg .wrapper-footer .wrapper-contact {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         flex-flow: row wrap;
         justify-content: space-between;
-        align-items: flex-start;
         width: 240px;
         height: 230px; }
         footer .footer-bg .wrapper-footer .wrapper-contact .contact__item {

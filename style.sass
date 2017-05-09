@@ -6,9 +6,9 @@ $clr-dgrey: #f2f2f2
 $clr-black: #333333
 $clr-quote: #e8e8e8
 
-=flex($direction, $wrap, $justify)
+=flex($direction, $wrap, $justify, $align)
 	display: flex
-	align-items: center
+	align-items: $align
 	flex-flow: $direction $wrap
 	justify-content: $justify
 
@@ -31,7 +31,7 @@ h1, h2, h3, p, summary
 	margin: 0 auto
 	box-shadow: 0 0 10px rgba(0,0,0,0.5)
 .block-product
-	+flex(row, nowrap, space-between)
+	+flex(row, nowrap, space-between, center)
 	background: $clr-dark
 	color: white
 	section
@@ -60,7 +60,7 @@ h1, h2, h3, p, summary
 
 .block-about
 	background: $clr-lgrey
-	+flex(row, nowrap, space-between)
+	+flex(row, nowrap, space-between, center)
 	section
 		width: 650px
 	h2
@@ -77,20 +77,18 @@ h1, h2, h3, p, summary
 		
 .block-dignity
 	background: $clr-dgrey
-	+flex(row, wrap, space-around)
+	+flex(row, wrap, space-around, center)
 	padding-bottom: 30px
 	h2
 		color: $clr-dark
 		font-size: 30px
 		margin-top: 0
 	.wrapper-dignity
-		+flex(row, wrap, space-between)
+		+flex(row, wrap, space-between, flex-start)
 		align-content: space-between
-		align-items: flex-start
 		.text
 			position: relative
-			+flex(row, nowrap, space-between)
-			align-items: flex-start
+			+flex(row, nowrap, space-between, flex-start)
 			width: 570px
 			color: $clr-black
 			font-size: 16px
@@ -127,18 +125,17 @@ h1, h2, h3, p, summary
 			margin: 0
 .block-screenshots
 	background: $clr-lgrey
-	+flex(row, wrap, space-around)
+	+flex(row, wrap, space-around, center)
 	h2
 		color: $clr-dark
 		font-size: 30px
 		margin-top: 0
 	.screenshots-wrapper
-		+flex(row, wrap, space-between)
-		height: 330px
+		+flex(row, wrap, space-between, center)
 		align-content: space-between
+		height: 330px
 		.screenshot-block
-			+flex(row, nowrap, space-between)
-			align-items: flex-start
+			+flex(row, nowrap, space-between, flex-start)
 			width: 575px
 			color: $clr-black
 			figure
@@ -158,7 +155,7 @@ h1, h2, h3, p, summary
 				margin: 0
 .block-reviews
 	background: $clr-dgrey
-	+flex(row, wrap, space-around)
+	+flex(row, wrap, space-around, center)
 	h2
 		color: $clr-dark
 		font-size: 30px
@@ -166,10 +163,9 @@ h1, h2, h3, p, summary
 		margin-top: 0
 	.review-wrapper
 		height: 270px
-		+flex(row, wrap, space-between)
+		+flex(row, wrap, space-between, center)
 		.review-block
-			+flex(row, nowrap, space-between)
-			align-items: flex-start
+			+flex(row, nowrap, space-between, flex-start)
 			width: 575px
 			figure
 				background: $clr-dark
@@ -220,8 +216,7 @@ h1, h2, h3, p, summary
 		color: $clr-dark
 	.wrapper-buy
 		height: 500px
-		+flex(row-reverse, wrap, space-between)
-		align-items: flex-end
+		+flex(row-reverse, wrap, space-between, flex-end)
 		.prop-lux
 			height: 500px
 			background: $clr-dark
@@ -285,8 +280,7 @@ footer
 			font-size: 30px
 			line-height: 36px
 		.wrapper-footer
-			+flex(row, nowrap, space-around)
-			align-items: flex-start
+			+flex(row, nowrap, space-around, flex-start)
 			form
 				width: 500px
 				height: 340px
@@ -329,8 +323,7 @@ footer
 					&:active
 						margin-top: 2px
 			.wrapper-contact
-				+flex(row, wrap, space-between)
-				align-items: flex-start
+				+flex(row, wrap, space-between, flex-start) 
 				width: 240px
 				height: 230px
 				.contact__item
@@ -359,7 +352,7 @@ footer
 						content: url(img/phone.png)
 					&--social
 						padding-left: 0
-						+flex(row, nowrap, space-around)
+						+flex(row, nowrap, space-around, center)
 						.pic
 							width: 48px
 							height: 42px
