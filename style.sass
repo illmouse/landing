@@ -107,20 +107,25 @@ h1, h2, h3, p, summary
 				&::-webkit-details-marker
 					display: none
 				&::before
+					content: ''
 					position: absolute
 					top: 9px
-					left: 2px
-					content: '+'
-					color: #fff
-					font-size: 300%
+					left: 14px
+					width: 4px
+					height: 24px
+					background-color: #fff
+					transition: all .5s ease
+				&::after
+					content: ''
+					position: absolute
+					top: 19px
+					left: 4px
+					width: 24px
+					height: 4px
+					background-color: #fff
 		details[open]
 			summary::before
-				position: absolute
-				top: 6px
-				left: 8px
-				content: '-'
-				color: #fff
-				font-size: 300%
+				transform: rotate(90deg)
 		p
 			margin: 0
 .block-screenshots
