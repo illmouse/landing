@@ -1,11 +1,11 @@
 $clr-background: #e9f0f6
-$clr-video: #c33845
-$clr-picture: #74d36a
-$clr-location: #efc845
+$clr-video: #c43840
+$clr-picture: #6dce5f
+$clr-location: #efc843
 $clr-line: #acb9c2
 $clr-post: #fff
 $clr-circle-bg: #fff
-$clr-button: #b0bac3
+$clr-button: #aeb8c1
 $clr-p-text: #b0bac3
 
 *
@@ -18,26 +18,25 @@ p
 	color: $clr-p-text
 
 .wrapper-center
+	position: relative
 	width: 1000px
 	margin: 10px auto
 	background-color: $clr-background
 	padding: 5px 50px
-
+	.line
+		position: absolute
+		top: 20px
+		left: 50%
+		width: 1px
+		height: 98%
+		background-color: $clr-line
 .block
-	position: relative
 	display: flex
 	flex-direction: row
 	flex-wrap: nowrap
 	margin: 50px 0
 	&-reverse
 		flex-direction: row-reverse
-	.line
-		position: absolute
-		top: -30px
-		left: 50%
-		width: 1px
-		height: 150%
-		background-color: $clr-line
 	.post
 		position: relative
 		width: 400px
@@ -60,14 +59,40 @@ p
 				right: 100%
 				border-left: 7px solid transparent
 				border-right: 7px solid #fff
+		.button
+			width: 70px
+			height: 23px
+			color: #fff
+			font-size: 10px
+			padding: 5px
+			border: none
+			border-radius: 2px
+			outline: none
+			background-color: $clr-button
+			&:active
+				background: linear-gradient(to top, $clr-button, #939caf)
+
 	.circle
 		width: 50px
 		height: 50px
 		margin: 0 25px
 		border: 2px solid #fff
 		border-radius: 100%
-		background-color: $clr-location
 		z-index: 10
+		&::after
+			content: ''
+			width: 35px
+			height: 35px
+			-webkit-background-size: 35px 35px
+			z-index: 100
+		&--picture
+			background-color: $clr-picture
+			&::after
+				background-image: url(../img/picture.svg)
+		&--video
+			background-color: $clr-video
+		&--location
+			background-color: $clr-location
 	.date
 		color: $clr-p-text
 		font-style: 'Arial' serif
