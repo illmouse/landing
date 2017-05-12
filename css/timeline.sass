@@ -23,6 +23,7 @@ p
 	margin: 10px auto
 	background-color: $clr-background
 	padding: 5px 50px
+	box-shadow: 0 0 5px rgba(0,0,0,0.5)
 	.line
 		position: absolute
 		top: 20px
@@ -43,6 +44,7 @@ p
 		padding: 20px
 		border-radius: 4px
 		background-color: $clr-post
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.26)
 		&:after
 			content: ""
 			position: absolute
@@ -78,21 +80,19 @@ p
 		margin: 0 25px
 		border: 2px solid #fff
 		border-radius: 100%
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 20px 20px
 		z-index: 10
-		&::after
-			content: ''
-			width: 35px
-			height: 35px
-			-webkit-background-size: 35px 35px
-			z-index: 100
 		&--picture
 			background-color: $clr-picture
-			&::after
-				background-image: url(../img/picture.svg)
+			background-image: url(../img/picture.svg)
 		&--video
 			background-color: $clr-video
+			background-image: url(../img/video.svg)
 		&--location
 			background-color: $clr-location
+			background-image: url(../img/location.svg)
 	.date
 		color: $clr-p-text
 		font-style: 'Arial' serif
