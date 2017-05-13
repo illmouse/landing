@@ -95,34 +95,44 @@ h1, h2, h3, p, summary, figcaption, header {
       font-size: 16px;
       line-height: 24px;
       padding-bottom: 20px; }
-    .block-dignity .wrapper-dignity .siding {
-      min-width: 32px;
-      min-height: 32px;
-      margin-right: 9px;
-      margin-top: 5px;
-      background: #445161;
-      padding: 5px; }
-    .block-dignity .wrapper-dignity details summary {
-      outline: none; }
-      .block-dignity .wrapper-dignity details summary::-webkit-details-marker {
-        display: none; }
-      .block-dignity .wrapper-dignity details summary::before {
-        content: "";
-        position: absolute;
-        top: 9px;
-        left: 14px;
-        width: 4px;
-        height: 24px;
-        background-color: #fff;
-        transition: all 0.5s ease-in; }
-      .block-dignity .wrapper-dignity details summary::after {
-        content: "";
-        position: absolute;
-        top: 19px;
-        left: 4px;
-        width: 24px;
-        height: 4px;
-        background-color: #fff; }
+    .block-dignity .wrapper-dignity details {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-left: 40px; }
+      .block-dignity .wrapper-dignity details summary {
+        outline: none; }
+        .block-dignity .wrapper-dignity details summary::-webkit-details-marker {
+          display: none; }
+        .block-dignity .wrapper-dignity details summary .siding {
+          position: absolute;
+          left: 0;
+          min-width: 32px;
+          min-height: 32px;
+          margin-right: 9px;
+          margin-top: 5px;
+          background: #445161;
+          padding: 5px; }
+        .block-dignity .wrapper-dignity details summary::before {
+          content: "";
+          position: absolute;
+          top: 9px;
+          left: 14px;
+          width: 4px;
+          height: 24px;
+          background-color: #fff;
+          transition: all 0.5s ease-in;
+          z-index: 1; }
+        .block-dignity .wrapper-dignity details summary::after {
+          content: "";
+          position: absolute;
+          top: 19px;
+          left: 4px;
+          width: 24px;
+          height: 4px;
+          background-color: #fff; }
     .block-dignity .wrapper-dignity details[open] summary::before {
       transform: rotate(90deg); }
     .block-dignity .wrapper-dignity p {

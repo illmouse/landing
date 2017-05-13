@@ -94,18 +94,23 @@ h1, h2, h3, p, summary, figcaption, header
 			font-size: 16px
 			line-height: 24px
 			padding-bottom: 20px
-		.siding
-			min-width: 32px
-			min-height: 32px
-			margin-right: 9px
-			margin-top: 5px
-			background: $clr-dark
-			padding: 5px
 		details
+			position: relative
+			+flex(row, nowrap, space-between, flex-start)
+			padding-left: 40px
 			summary
 				outline: none
 				&::-webkit-details-marker
 					display: none
+				.siding
+					position: absolute
+					left: 0
+					min-width: 32px
+					min-height: 32px
+					margin-right: 9px
+					margin-top: 5px
+					background: $clr-dark
+					padding: 5px
 				&::before
 					content: ''
 					position: absolute
@@ -115,6 +120,7 @@ h1, h2, h3, p, summary, figcaption, header
 					height: 24px
 					background-color: #fff
 					transition: all .5s ease-in
+					z-index: 1
 				&::after
 					content: ''
 					position: absolute
