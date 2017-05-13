@@ -406,6 +406,7 @@ footer {
             content: url(../img/phone.png); }
           footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--social {
             padding-left: 0;
+            align-self: flex-end;
             display: flex;
             align-items: center;
             flex-flow: row nowrap;
