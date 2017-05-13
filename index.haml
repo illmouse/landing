@@ -2,7 +2,7 @@
 %html{:lang => "en"}
 	%head
 		%meta{:charset => "UTF-8"}
-		%meta{:name => "viewport", :content => "width=device-width", :initial-scale => "1"}
+		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 		%title Landing
 		%link{:rel => "stylesheet", :href => "css/normalize.css"}
 		%link{:rel => "stylesheet", :href => "css/style.css"}
@@ -23,17 +23,19 @@
 						%li A detailed decription of your product
 						%li Tell us about the advantages and merits
 						%li Associate the page with the payment system
-				%figure
-			%main{:role => "main"}
+				%a{:href => "#"}
+					.img-product
+			%main
 				.block.block-about
-					%section
-						%h2 About your product
+					%article.art-about
+						%h3 About your product
 						.text-about
 							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
 							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
-					%figure
+					%a{:href => "#"}
+						.img-about
 				%section.block.block-dignity
-					%h2 Dignity and pluses product
+					%h3 Dignity and pluses product
 					.wrapper-dignity
 						- 6.times do
 							.text
@@ -42,27 +44,27 @@
 									%summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi doloremque laudantium praesentium, exercitationem ea! Laborum at magni deleniti id distinctio similique, perferendis reiciendis in quidem ab iure, incidunt saepe.
 									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
 				%section.block.block-screenshots					
-					%h2 Screeshots
+					%h3 Screeshots
 					.screenshots-wrapper
 						- 4.times do
 							.screenshot-block
 								%figure
 								.text
-									%h3 The description for the image
+									%figcaption The description for the image
 									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
 				%section.block.block-reviews
-					%h2 Reviewes
+					%h3 Reviewes
 					.review-wrapper
 						- 4.times do
 							.review-block
-								%figure
-								%blockquote.quote
-									%p.quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil alias praesentium recusandae incidunt vitae animi inventore, exercitationem ut!
-									%p.quote__sgn Lourens S.
+								.img-photo
+								%article.art-quote
+									%p.art-quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil alias praesentium recusandae incidunt vitae animi inventore, exercitationem ut!
+									%p.art-quote__sgn Lourens S.
 				%section.block.block-buy
-					%h2 Buy it now
+					%h3 Buy it now
 					.wrapper-buy
-						.prop.prop-lux
+						%section.prop.prop-lux
 							.header Lux
 							.price $200
 							.desc
@@ -70,7 +72,7 @@
 									- 12.times do
 										%li Some text about product.
 							%button BUY
-						.prop.prop-premium
+						%section.prop.prop-premium
 							.header Premium
 							.price $150
 							.desc
@@ -78,7 +80,7 @@
 									- 8.times do
 										%li Some text about product.
 							%button BUY
-						.prop.prop-standart
+						%section.prop.prop-standart
 							.header Standart
 							.price $100
 							.desc
@@ -88,11 +90,11 @@
 							%button BUY
 			%footer
 				.footer-bg
-					%h2 Contacts
+					%header Contacts
 					.wrapper-footer
 						%form{:action => "post"}
 							%input.name{:type => "text", :placeholder => "Your name:", :required => true}
-							%input.email{:type => "email", :placeholder => "Your email:", :required => true}
+							%input.email{:type => "email", :placeholder => "Your email:", :pattern => "[^@]+@[^@]+\.[a-zA-Z]{2,6}", :required => true}
 							%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:", :required => true}
 							%button{:type => "submit"} SEND
 						.wrapper-contact

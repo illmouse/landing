@@ -4,7 +4,7 @@
 figure, blockquote, article {
   margin: 0; }
 
-h1, h2, h3, p, summary {
+h1, h2, h3, p, summary, figcaption, header {
   font-family: "Arial";
   font-weight: 400; }
 
@@ -26,7 +26,7 @@ h1, h2, h3, p, summary {
   .block-product section {
     font-size: 20px;
     line-height: 36px; }
-  .block-product figure {
+  .block-product .img-product {
     background: #fff;
     width: 470px;
     height: 215px; }
@@ -53,16 +53,16 @@ h1, h2, h3, p, summary {
   align-items: center;
   flex-flow: row nowrap;
   justify-content: space-between; }
-  .block-about section {
+  .block-about .art-about {
     width: 650px; }
-  .block-about h2 {
+  .block-about h3 {
     color: #445161;
     font-size: 30px; }
   .block-about p {
     color: #333333;
     font-size: 16px;
     line-height: 24px; }
-  .block-about figure {
+  .block-about .img-about {
     background: #445161;
     width: 430px;
     height: 245px; }
@@ -74,7 +74,7 @@ h1, h2, h3, p, summary {
   flex-flow: row wrap;
   justify-content: space-around;
   padding-bottom: 30px; }
-  .block-dignity h2 {
+  .block-dignity h3 {
     color: #445161;
     font-size: 30px;
     margin-top: 0; }
@@ -134,7 +134,7 @@ h1, h2, h3, p, summary {
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-around; }
-  .block-screenshots h2 {
+  .block-screenshots h3 {
     color: #445161;
     font-size: 30px;
     margin-top: 0; }
@@ -158,7 +158,7 @@ h1, h2, h3, p, summary {
         min-height: 150px;
         margin-top: 5px;
         margin-right: 15px; }
-      .block-screenshots .screenshots-wrapper .screenshot-block h3 {
+      .block-screenshots .screenshots-wrapper .screenshot-block figcaption {
         color: #445161;
         font-size: 24px;
         line-height: 30px;
@@ -174,7 +174,7 @@ h1, h2, h3, p, summary {
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-around; }
-  .block-reviews h2 {
+  .block-reviews h3 {
     color: #445161;
     font-size: 30px;
     line-height: 36px;
@@ -191,32 +191,32 @@ h1, h2, h3, p, summary {
       flex-flow: row nowrap;
       justify-content: space-between;
       width: 575px; }
-      .block-reviews .review-wrapper .review-block figure {
+      .block-reviews .review-wrapper .review-block .img-photo {
         background: #445161;
         min-width: 75px;
         min-height: 75px;
         border-radius: 100%;
         margin-top: 5px;
         margin-right: 15px; }
-      .block-reviews .review-wrapper .review-block .quote {
+      .block-reviews .review-wrapper .review-block .art-quote {
         border-radius: 5px;
         width: 480px;
         height: 120px;
         background: #e8e8e8;
         padding: 15px;
         position: relative; }
-        .block-reviews .review-wrapper .review-block .quote__text {
+        .block-reviews .review-wrapper .review-block .art-quote__text {
           color: #333333;
           font-size: 14px;
           font-style: italic;
           line-height: 18px;
           margin: 0 0 15px 0; }
-        .block-reviews .review-wrapper .review-block .quote__sgn {
+        .block-reviews .review-wrapper .review-block .art-quote__sgn {
           color: #989898;
           font-size: 14px;
           line-height: 18px;
           margin: 0; }
-        .block-reviews .review-wrapper .review-block .quote:after {
+        .block-reviews .review-wrapper .review-block .art-quote:after {
           content: "";
           position: absolute;
           right: 100%;
@@ -230,7 +230,7 @@ h1, h2, h3, p, summary {
 .block-buy {
   background: #fcfcfc;
   padding: 50px 145px; }
-  .block-buy h2 {
+  .block-buy h3 {
     margin: 0 auto;
     margin-bottom: 30px;
     width: 400px;
@@ -299,7 +299,7 @@ footer {
   background: #445161; }
   footer .footer-bg {
     padding: 50px 220px; }
-    footer .footer-bg h2 {
+    footer .footer-bg header {
       margin: 0 auto;
       margin-bottom: 30px;
       width: 300px;
@@ -381,19 +381,19 @@ footer {
           footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--skype:before {
             position: absolute;
             left: 0;
-            content: url(img/skype.png); }
+            content: url(../img/skype.png); }
           footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--icq:before {
             position: absolute;
             left: 0;
-            content: url(img/icq.png); }
+            content: url(../img/icq.png); }
           footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--mail:before {
             position: absolute;
             left: 0;
-            content: url(img/mail.png); }
+            content: url(../img/mail.png); }
           footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--phone:before {
             position: absolute;
             left: 0;
-            content: url(img/phone.png); }
+            content: url(../img/phone.png); }
           footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--social {
             padding-left: 0;
             display: flex;
