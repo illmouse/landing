@@ -413,7 +413,7 @@ footer {
             footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--social .pic {
               width: 48px;
               height: 42px;
-              background: url(img/social.png) 0 0; }
+              background: url(../img/social.png) 0 0; }
             footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--social .pic--facebook {
               background-position: -47px 0; }
             footer .footer-bg .wrapper-footer .wrapper-contact .contact__item--social .pic--insta {
