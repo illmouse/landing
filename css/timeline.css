@@ -65,6 +65,8 @@ p {
       background-color: #aeb8c1; }
       .block .post .button:active {
         background: linear-gradient(to top, #aeb8c1, #939caf); }
+      .block .post .button-reverse {
+        float: right; }
   .block .circle {
     width: 50px;
     height: 50px;
