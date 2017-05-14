@@ -20,7 +20,7 @@ $clr-quote: #e8e8e8
 figure, blockquote, article
 	margin: 0
 
-h1, h2, h3, p, summary, figcaption, header
+h1, h2, h3, h4, p, summary, figcaption, .header
 	font-family: 'Arial'
 	font-weight: 400
 
@@ -118,19 +118,19 @@ h1, h2, h3, p, summary, figcaption, header
 			position: relative
 			+flex(row, nowrap, space-between, flex-start)
 			padding-left: 40px
+			.siding
+				position: absolute
+				left: 0
+				min-width: 32px
+				min-height: 32px
+				margin-right: 9px
+				margin-top: 5px
+				background: $clr-dark
+				padding: 5px
 			summary
 				outline: none
 				&::-webkit-details-marker
 					display: none
-				.siding
-					position: absolute
-					left: 0
-					min-width: 32px
-					min-height: 32px
-					margin-right: 9px
-					margin-top: 5px
-					background: $clr-dark
-					padding: 5px
 				&::before
 					content: ''
 					position: absolute
@@ -152,7 +152,7 @@ h1, h2, h3, p, summary, figcaption, header
 		details[open]
 			summary::before
 				transform: rotate(90deg)
-		p
+		.summary
 			margin: 0
 .block-screenshots
 	background: $clr-lgrey
@@ -166,24 +166,26 @@ h1, h2, h3, p, summary, figcaption, header
 		align-content: space-between
 		height: 330px
 		.screenshot-block
-			+flex(row, nowrap, space-between, flex-start)
+			+flex(row, wrap, space-between, flex-start)
 			width: 575px
 			color: $clr-black
 			figure
-				background: $clr-dark
-				min-width: 200px
-				min-height: 150px
-				margin-top: 5px
-				margin-right: 15px
-			figcaption
-				color: $clr-dark
-				font-size: 24px
-				line-height: 30px
-				margin: 0
-			p
-				font-size: 16px
-				line-height: 24px
-				margin: 0
+				.screenshot
+					float: left
+					background: $clr-dark
+					width: 200px
+					height: 150px
+					margin-top: 5px
+					margin-right: 15px
+				figcaption
+					color: $clr-dark
+					font-size: 24px
+					line-height: 30px
+					margin: 0
+				p
+					font-size: 16px
+					line-height: 24px
+					margin: 5px 0
 .block-reviews
 	background: $clr-dgrey
 	+flex(row, wrap, space-around, center)
@@ -245,6 +247,8 @@ h1, h2, h3, p, summary, figcaption, header
 		font-size: 30px
 		line-height: 36px
 		color: $clr-dark
+	h4
+		margin: 0
 	.wrapper-buy
 		height: 500px
 		+flex(row-reverse, wrap, space-between, flex-end)
@@ -302,7 +306,7 @@ footer
 	background: $clr-dark
 	.footer-bg
 		padding: 50px 220px
-		header
+		.header
 			margin: 0 auto
 			margin-bottom: 30px
 			width: 300px

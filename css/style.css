@@ -4,7 +4,7 @@
 figure, blockquote, article {
   margin: 0; }
 
-h1, h2, h3, p, summary, figcaption, header {
+h1, h2, h3, h4, p, summary, figcaption, .header {
   font-family: "Arial";
   font-weight: 400; }
 
@@ -123,19 +123,19 @@ h1, h2, h3, p, summary, figcaption, header {
       flex-flow: row nowrap;
       justify-content: space-between;
       padding-left: 40px; }
+      .block-dignity .wrapper-dignity details .siding {
+        position: absolute;
+        left: 0;
+        min-width: 32px;
+        min-height: 32px;
+        margin-right: 9px;
+        margin-top: 5px;
+        background: #445161;
+        padding: 5px; }
       .block-dignity .wrapper-dignity details summary {
         outline: none; }
         .block-dignity .wrapper-dignity details summary::-webkit-details-marker {
           display: none; }
-        .block-dignity .wrapper-dignity details summary .siding {
-          position: absolute;
-          left: 0;
-          min-width: 32px;
-          min-height: 32px;
-          margin-right: 9px;
-          margin-top: 5px;
-          background: #445161;
-          padding: 5px; }
         .block-dignity .wrapper-dignity details summary::before {
           content: "";
           position: absolute;
@@ -156,7 +156,7 @@ h1, h2, h3, p, summary, figcaption, header {
           background-color: #fff; }
     .block-dignity .wrapper-dignity details[open] summary::before {
       transform: rotate(90deg); }
-    .block-dignity .wrapper-dignity p {
+    .block-dignity .wrapper-dignity .summary {
       margin: 0; }
 
 .block-screenshots {
@@ -179,25 +179,26 @@ h1, h2, h3, p, summary, figcaption, header {
     .block-screenshots .screenshots-wrapper .screenshot-block {
       display: flex;
       align-items: flex-start;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       justify-content: space-between;
       width: 575px;
       color: #333333; }
-      .block-screenshots .screenshots-wrapper .screenshot-block figure {
+      .block-screenshots .screenshots-wrapper .screenshot-block figure .screenshot {
+        float: left;
         background: #445161;
-        min-width: 200px;
-        min-height: 150px;
+        width: 200px;
+        height: 150px;
         margin-top: 5px;
         margin-right: 15px; }
-      .block-screenshots .screenshots-wrapper .screenshot-block figcaption {
+      .block-screenshots .screenshots-wrapper .screenshot-block figure figcaption {
         color: #445161;
         font-size: 24px;
         line-height: 30px;
         margin: 0; }
-      .block-screenshots .screenshots-wrapper .screenshot-block p {
+      .block-screenshots .screenshots-wrapper .screenshot-block figure p {
         font-size: 16px;
         line-height: 24px;
-        margin: 0; }
+        margin: 5px 0; }
 
 .block-reviews {
   background: #f2f2f2;
@@ -269,6 +270,8 @@ h1, h2, h3, p, summary, figcaption, header {
     font-size: 30px;
     line-height: 36px;
     color: #445161; }
+  .block-buy h4 {
+    margin: 0; }
   .block-buy .wrapper-buy {
     height: 500px;
     display: flex;
@@ -330,7 +333,7 @@ footer {
   background: #445161; }
   footer .footer-bg {
     padding: 50px 220px; }
-    footer .footer-bg header {
+    footer .footer-bg .header {
       margin: 0 auto;
       margin-bottom: 30px;
       width: 300px;

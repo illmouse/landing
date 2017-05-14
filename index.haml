@@ -43,19 +43,20 @@
 						- 6.times do
 							.text
 								%details
-									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi doloremque laudantium praesentium, exercitationem ea! Laborum at magni deleniti id distinctio similique, perferendis reiciendis in quidem ab iure, incidunt saepe.
 									%summary
-										.siding
-										%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
+										%span.siding
+										%span.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
+									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi doloremque laudantium praesentium, exercitationem ea! Laborum at magni deleniti id distinctio similique, perferendis reiciendis in quidem ab iure, incidunt saepe.
 				%section.block.block-screenshots					
 					%h3 Screeshots
 					.screenshots-wrapper
 						- 4.times do
 							.screenshot-block
 								%figure
-								.text
-									%figcaption The description for the image
-									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
+									.screenshot
+									%figcaption
+										The description for the image
+										%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
 				%section.block.block-reviews
 					%h3 Reviewes
 					.review-wrapper
@@ -69,7 +70,8 @@
 					%h3 Buy it now
 					.wrapper-buy
 						%section.prop.prop-lux
-							.header Lux
+							.header 
+								%h4 Lux
 							.price $200
 							.desc
 								%ol
@@ -77,7 +79,8 @@
 										%li Some text about product.
 							%button BUY
 						%section.prop.prop-premium
-							.header Premium
+							.header 
+								%h4 Premium
 							.price $150
 							.desc
 								%ol
@@ -85,7 +88,8 @@
 										%li Some text about product.
 							%button BUY
 						%section.prop.prop-standart
-							.header Standart
+							.header
+								%h4 Standart
 							.price $100
 							.desc
 								%ol
@@ -94,7 +98,7 @@
 							%button BUY
 			%footer
 				.footer-bg
-					%header Contacts
+					.header Contacts
 					.wrapper-footer
 						%form{:action => "post"}
 							%input.name{:type => "text", :placeholder => "Your name:", :required => true}
