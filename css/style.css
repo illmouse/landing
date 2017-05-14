@@ -134,7 +134,7 @@ h1, h2, h3, h4, p, summary, figcaption, .header {
         padding: 5px; }
       .block-dignity .wrapper-dignity details summary {
         outline: none; }
-        .block-dignity .wrapper-dignity details summary::-webkit-details-marker {
+        .block-dignity .wrapper-dignity details summary::-webkit-details-marker, .block-dignity .wrapper-dignity details summary -moz--details-marker, .block-dignity .wrapper-dignity details summary -o-details-marker {
           display: none; }
         .block-dignity .wrapper-dignity details summary::before {
           content: "";
