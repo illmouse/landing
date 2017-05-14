@@ -8,6 +8,27 @@ h1, h2, h3, p, summary, figcaption, header {
   font-family: "Arial";
   font-weight: 400; }
 
+.timeline {
+  position: fixed;
+  top: 50px;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+  padding: 15px 0;
+  background-color: #445161;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  transition: all 0.5s ease-out; }
+  .timeline-text {
+    display: none;
+    height: 30px;
+    color: #333333; }
+  .timeline:hover {
+    transform: scale(2); }
+  .timeline:hover .timeline-text {
+    display: block;
+    margin-left: 60px; }
+
 .block {
   padding: 50px; }
 
