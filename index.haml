@@ -6,11 +6,12 @@
 		%title Landing
 		%link{:rel => "stylesheet", :href => "css/normalize.css"}
 		%link{:rel => "stylesheet", :href => "css/style.css"}
+		%link{:rel => "stylesheet", :href => "css/font-awesome.min.css"}
 		-# %script{:src => "js/script.js"}
 
 		-# variables and stuff
 		- @contact_items = {'skype' => 'here_your_login_skype', 'icq' => '279679659', 'mail' => 'psdhtmlcss@mail.ru', 'phone' => '80 00 4568 55 55', 'social' => ''}
-		- @social_pic = ['twitter', 'facebook', 'insta', 'gplus', 'youtube']
+		- @social_pic = ['twitter', 'facebook', 'instagram', 'google-plus', 'youtube']
 		- @prop = {'Lux' => ['12','$200'],'Premium' => ['8','$150'],'Standart' => ['4','$100']}
 
 	%body
@@ -36,7 +37,8 @@
 							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
 							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
 					%a{:href => "#"}
-						.img-about
+						.video-about
+							%video{:src => "video/mp4/matcha.mp4", :controls => "true", :autoplay => "true", :muted => "true", :loop => "true"}
 				%section.block.block-dignity
 					%h3 Dignity and pluses product
 					.wrapper-dignity
@@ -50,10 +52,10 @@
 				%section.block.block-screenshots					
 					%h3 Screeshots
 					.screenshots-wrapper
-						- 4.times do
+						- (1..4).each do |i|
 							.screenshot-block
 								%figure
-									.screenshot
+									%div{class: "screenshot screenshot--#{i}"}
 									%figcaption
 										The description for the image
 										%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
@@ -110,7 +112,8 @@
 								- if key == 'social'
 									%div{class: "contact__item contact__item--#{key}"}
 										-@social_pic.each do |value|
-											%div{class: "pic pic--#{value}"}
+											%a{:href => "#"}
+												%div{:class => "fa fa-#{value} fa-2x", :aria-hidden => "true"}
 								- else
 									%div{class: "contact__item contact__item--#{key}"} #{value}
 				.footer-sm Copyright © 2014 Product name · PSD HTML CSS
