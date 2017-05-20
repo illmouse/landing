@@ -29,94 +29,91 @@
 						%li Associate the page with the payment system
 				%a{:href => "#"}
 					.img-product
-			%main
-				.block.block-about
-					%article.art-about
-						%h3 About your product
-						.text-about
-							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
-							%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
-					%a{:href => "#"}
-						.video-about
-							%video{:src => "video/mp4/matcha.mp4", :controls => "true", :autoplay => "true", :muted => "true", :loop => "true"}
-				%section.block.block-dignity
-					%h3 Dignity and pluses product
-					.wrapper-dignity
-						- 6.times do
-							.text
-								%details
-									%summary
-										%span.siding
-										%span.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
-									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi doloremque laudantium praesentium, exercitationem ea! Laborum at magni deleniti id distinctio similique, perferendis reiciendis in quidem ab iure, incidunt saepe.
-				%section.block.block-screenshots					
-					%h3 Screeshots
-					.screenshots-wrapper
-						- (1..4).each do |i|
-							.screenshot-block
-								%figure
-									%div{class: "screenshot screenshot--#{i}"}
-									%figcaption
-										The description for the image
-										%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
-				%section.block.block-reviews
-					%h3 Reviewes
-					.review-wrapper
-						- 4.times do
-							.review-block
-								.img-photo
-								%article.art-quote
-									%p.art-quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil alias praesentium recusandae incidunt vitae animi inventore, exercitationem ut!
-									%p.art-quote__sgn Lourens S.
-				%section.block.block-buy
-					%h3 Buy it now
-					.wrapper-buy
-						%section.prop.prop-lux
-							.header 
-								%h4 Lux
-							.price $200
-							.desc
-								%ol
-									- 12.times do
-										%li Some text about product.
-							%button BUY
-						%section.prop.prop-premium
-							.header 
-								%h4 Premium
-							.price $150
-							.desc
-								%ol
-									- 8.times do
-										%li Some text about product.
-							%button BUY
-						%section.prop.prop-standart
-							.header
-								%h4 Standart
-							.price $100
-							.desc
-								%ol
-									- 4.times do
-										%li Some text about product.
-							%button BUY
-			%footer
-				.footer-bg
-					.header Contacts
-					.wrapper-footer
-						%form{:action => "post"}
-							%input.name{:type => "text", :placeholder => "Your name:", :required => true}
-							%input.email{:type => "email", :placeholder => "Your email:", :pattern => "[^@]+@[^@]+\.[a-zA-Z]{2,6}", :required => true}
-							%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:", :required => true}
-							%button{:type => "submit"} SEND
-						.wrapper-contact
-							-@contact_items.each do |key, value|
-								- if key == 'social'
-									%div{class: "contact__item contact__item--#{key}"}
-										-@social_pic.each do |value|
-											%a{:href => "#"}
-												%div{:class => "fa fa-#{value} fa-2x", :aria-hidden => "true"}
-								- else
-									%div{class: "contact__item contact__item--#{key}"} #{value}
-				.footer-sm Copyright © 2014 Product name · PSD HTML CSS
+			.block.block-about
+				%article.art-about
+					%h3 About your product
+					.text-about
+						%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae velit dolorum fuga perspiciatis nam praesentium, laboriosam soluta pariatur in. Voluptatum recusandae eos perspiciatis voluptates quidem adipisci libero debitis blanditiis! Nam.
+						%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dicta error quas rem. Ullam voluptatibus ducimus nam mollitia, dicta maiores est ipsa et alias ipsam asperiores ab, ea minima id.
+				%a{:href => "#"}
+					.img-about
+			%section.block.block-dignity
+				%h3 Dignity and pluses product
+				.wrapper-dignity
+					- 6.times do
+						.text
+							%details
+								%summary
+									%span.siding
+									%span.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem!
+								%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi doloremque laudantium praesentium, exercitationem ea! Laborum at magni deleniti id distinctio similique, perferendis reiciendis in quidem ab iure, incidunt saepe.
+			%section.block.block-screenshots					
+				%h3 Screeshots
+				.screenshots-wrapper
+					- 4.times do
+						.screenshot-block
+							%figure
+								.screenshot
+								%figcaption
+									The description for the image
+									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
+			%section.block.block-reviews
+				%h3 Reviewes
+				.review-wrapper
+					- 4.times do
+						.review-block
+							.img-photo
+							%article.art-quote
+								%p.art-quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil alias praesentium recusandae incidunt vitae animi inventore, exercitationem ut!
+								%p.art-quote__sgn Lourens S.
+			%section.block.block-buy
+				%h3 Buy it now
+				.wrapper-buy
+					%section.prop.prop-lux
+						.header 
+							%h4 Lux
+						.price $200
+						.desc
+							%ol
+								- 12.times do
+									%li Some text about product.
+						%button BUY
+					%section.prop.prop-premium
+						.header 
+							%h4 Premium
+						.price $150
+						.desc
+							%ol
+								- 8.times do
+									%li Some text about product.
+						%button BUY
+					%section.prop.prop-standart
+						.header
+							%h4 Standart
+						.price $100
+						.desc
+							%ol
+								- 4.times do
+									%li Some text about product.
+						%button BUY
+		%footer
+			.footer-bg
+				.header Contacts
+				.wrapper-footer
+					%form{:action => "post"}
+						%input.name{:type => "text", :placeholder => "Your name:", :required => true}
+						%input.email{:type => "email", :placeholder => "Your email:", :pattern => "[^@]+@[^@]+\.[a-zA-Z]{2,6}", :required => true}
+						%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:", :required => true}
+						%button{:type => "submit"} SEND
+					.wrapper-contact
+						-@contact_items.each do |key, value|
+							- if key == 'social'
+								%div{class: "contact__item contact__item--#{key}"}
+									-@social_pic.each do |value|
+										%div{class: "pic pic--#{value}"}
+							- else
+								%div{class: "contact__item contact__item--#{key}"} #{value}
+			.footer-sm Copyright © 2014 Product name · PSD HTML CSS
 
 
 
