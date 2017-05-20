@@ -110,7 +110,7 @@
 								- if key == 'social'
 									%div{class: "contact__item contact__item--#{key}"}
 										-@social_pic.each do |value|
-											%div{class: "pic pic--#{value}"}
+											%div{:class => "fa fa-#{value} fa-2x", :aria-hidden => "true"}
 								- else
 									%div{class: "contact__item contact__item--#{key}"} #{value}
 				.footer-sm Copyright © 2014 Product name · PSD HTML CSS
