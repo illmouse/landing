@@ -51,10 +51,10 @@
 			%section.block.block-screenshots					
 				%h3 Screeshots
 				.screenshots-wrapper
-					- 4.times do
+					- (1..4).each do |i|
 						.screenshot-block
 							%figure
-								.screenshot
+								%div{class: "screenshot screenshot--#{i}"}
 								%figcaption
 									The description for the image
 									%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque mollitia cupiditate, error voluptatibus totam repellendus libero dolores consectetur accusantium ullam.
