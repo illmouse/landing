@@ -96,24 +96,24 @@
 								- 4.times do
 									%li Some text about product.
 						%button BUY
-		%footer
-			.footer-bg
-				.header Contacts
-				.wrapper-footer
-					%form{:action => "post"}
-						%input.name{:type => "text", :placeholder => "Your name:", :required => true}
-						%input.email{:type => "email", :placeholder => "Your email:", :pattern => "[^@]+@[^@]+\.[a-zA-Z]{2,6}", :required => true}
-						%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:", :required => true}
-						%button{:type => "submit"} SEND
-					.wrapper-contact
-						-@contact_items.each do |key, value|
-							- if key == 'social'
-								%div{class: "contact__item contact__item--#{key}"}
-									-@social_pic.each do |value|
-										%div{class: "pic pic--#{value}"}
-							- else
-								%div{class: "contact__item contact__item--#{key}"} #{value}
-			.footer-sm Copyright © 2014 Product name · PSD HTML CSS
+			%footer
+				.footer-bg
+					.header Contacts
+					.wrapper-footer
+						%form{:action => "post"}
+							%input.name{:type => "text", :placeholder => "Your name:", :required => true}
+							%input.email{:type => "email", :placeholder => "Your email:", :pattern => "[^@]+@[^@]+\.[a-zA-Z]{2,6}", :required => true}
+							%textarea{:name => "message", :cols => "30", :rows => "10", :placeholder => "Your message:", :required => true}
+							%button{:type => "submit"} SEND
+						.wrapper-contact
+							-@contact_items.each do |key, value|
+								- if key == 'social'
+									%div{class: "contact__item contact__item--#{key}"}
+										-@social_pic.each do |value|
+											%div{class: "pic pic--#{value}"}
+								- else
+									%div{class: "contact__item contact__item--#{key}"} #{value}
+				.footer-sm Copyright © 2014 Product name · PSD HTML CSS
 
 
 
